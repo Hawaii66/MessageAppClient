@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message App</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <h1>Simple message app</h1>
+    </header>
+    <div class="Main">
+        <form class="newPost">
+            <h2>New Message</h2>
+            <h3>Name</h3>
+            <input type="test" name="name" id="name" />
+            <h3>Message</h3>
+            <textarea name="message" id="message" cols="30" rows="5"></textarea>
+            <div class="channel">
+                <select name="channelTypes" id="channelTypes" onchange="MessageSelectChange()">
+            <!--<option value="All">All</option>-->
+            <option value="Random">Random</option>
+            <option value="Food">Food</option>
+            <option value="Homework">Homework</option>
+            <option value="Other">Other channel</option>
+          </select>
+            </div>
+            <input type="messageOtherChannel" name="messageOtherChannel" id="messageOtherChannel" />
+            <h4 class="Error">Their was a error with your message</h4>
+            <button class="formSubmitButton">Submit</button>
+        </form>
+        <div class="ChannelMessages">
+            <h2>Channel</h2>
+            <form class="newChannel">
+                <select name="channelTypes" id="channelTypes" onchange="ChangeChannel('')">
+            <option value="All">All</option>
+            <option value="Random">Random</option>
+            <option value="Food">Food</option>
+            <option value="Homework">Homework</option>
+            <option value="Other">Other channel</option>
+            <option value="NewChannel">Create a new channel</option>
+          </select>
+                <input type="otherName" name="otherName" id="otherName" />
+                <button class="otherNameSubmit">Change Channel</button>
+            </form>
+            <h4 class="Error">Channel dont exists</h4>
+            <div class="Messages">
+                <div>
+                    <h3>First Message</h3>
+                    <p>Some text in first message</p>
+                </div>
+            </div>
+        </div>
+        <div class="loading">
+            <img src="../loading.gif" alt="Loading Image" />
+        </div>
+    </div>
+
+    <script src="../client.js"></script>
+</body>
+
+</html>
